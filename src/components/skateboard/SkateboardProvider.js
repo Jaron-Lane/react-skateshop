@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export const ProviderContext = React.createContext();
 
-export const SkateboardProvider = () => {
+export const SkateboardProvider = (props) => {
     const [ skateboards, setSkateboards ] = useState([]);
 
     const getSkateboards = () => {
@@ -20,4 +20,12 @@ export const SkateboardProvider = () => {
         .then(res => res.json())
         .then(getSkateboards)
     }
+
+    return (
+        <ProviderContext.Provider value = {{
+            skateboards, getSkateboards, addSkateboard
+        }}>
+            { props.children }
+        </ProviderContext.Provider>
+    ) 
 }
