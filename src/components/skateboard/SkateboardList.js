@@ -19,7 +19,7 @@ export const SkateboardList = () => {
     return (
         <div className = 'skateboards'>
         {
-            skateboards.map(brd => <Skateboard key = {brd.id} board={brd} />)
+            skateboards.map(brd => <Skateboard key = {brd.id} skateboard={brd} />)
         }
         </div>
     )
