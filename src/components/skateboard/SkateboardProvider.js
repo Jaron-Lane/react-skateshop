@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const ProviderContext = React.createContext();
+export const SkateboardContext = React.createContext();
 
 export const SkateboardProvider = (props) => {
     const [ skateboards, setSkateboards ] = useState([]);
