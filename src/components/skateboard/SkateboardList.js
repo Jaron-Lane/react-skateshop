@@ -10,6 +10,12 @@ export const SkateboardList = () => {
         getSkateboards()
     }, [])
 
+    useEffect(() => {
+        console.log(skateboards)
+    }, [skateboards])
+
+    console.log(skateboards)
+
     return (
         <div className = 'skateboards'>
         {

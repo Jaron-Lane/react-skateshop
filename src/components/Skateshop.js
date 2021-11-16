@@ -1,6 +1,8 @@
 import React from "react";
-import { LocationList } from "./location/LocationList";
 import { LocationProvider } from "./location/LocationProvider";
+import { LocationList } from "./location/LocationList";
+import { SkateboardProvider } from "./skateboard/SkateboardProvider";
+import { SkateboardList } from "./skateboard/SkateboardList";
 import "./Skateshop.css";
 
 export const Skateshop = () => (
@@ -12,5 +14,10 @@ export const Skateshop = () => (
         <LocationProvider>
             <LocationList />
         </LocationProvider>
+
+        <h2>Skateboards</h2>
+        <SkateboardProvider>
+            <SkateboardList />
+        </SkateboardProvider>
     </>
 )

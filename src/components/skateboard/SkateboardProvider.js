@@ -7,25 +7,27 @@ export const SkateboardProvider = (props) => {
 
     const getSkateboards = () => {
         return fetch("http://localhost:8088/skateboards")
-        .then(res => res.json())
-        .then(setSkateboards)
+            .then(res => res.json())
+            .then(setSkateboards)
     }
 
-    const addSkateboard = () => {
+    const addSkateboard = (skateboard) => {
         return fetch("http://localhost:8088/skateboards", {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(skateboards)
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(skateboard)
         })
         .then(res => res.json())
         .then(getSkateboards)
     }
 
     return (
-        <ProviderContext.Provider value = {{
+        <SkateboardContext.Provider value = {{
             skateboards, getSkateboards, addSkateboard
         }}>
-            { props.children }
-        </ProviderContext.Provider>
+            {props.children}
+        </SkateboardContext.Provider>
     ) 
 }
