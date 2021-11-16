@@ -1,9 +1,9 @@
 import React from 'react';
 import "./Skateboard.css";
 
-export const Skateboard = () => (
+export const Skateboard = ({ skateboard }) => (
     <section className = "skateboard">
-        <h3 className = "skateboard__name">SC1</h3>
-        <div className = "skateboard__type">Type: Cruiser</div>
+        <h3 className = "skateboard__name">{ skateboard.name }</h3>
+        <div className = "skateboard__type">{ skateboard.type }</div>
     </section>
 )
