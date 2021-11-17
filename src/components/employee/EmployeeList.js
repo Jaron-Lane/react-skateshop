@@ -8,6 +8,7 @@ export const EmployeeList = () => {
 
     useEffect(() => {
         getEmployees()
+        console.log(employees)
     }, [])
 
     return (

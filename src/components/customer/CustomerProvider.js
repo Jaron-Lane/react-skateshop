@@ -7,7 +7,7 @@ export const CustomerProvider = (props) => {
 
     const getCustomers = () => {
         return fetch("http://localhost:8088/customers")
-            .then(res => res.json)
+            .then(res => res.json())
             .then(setCustomer)
     }
 
@@ -19,6 +19,8 @@ export const CustomerProvider = (props) => {
         })
         .then(getCustomers)
     }
+
+    console.log( "display my customers", customers )
 
     return (
         <CustomerContext.Provider value = {{

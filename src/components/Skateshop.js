@@ -5,6 +5,8 @@ import { SkateboardProvider } from "./skateboard/SkateboardProvider";
 import { SkateboardList } from "./skateboard/SkateboardList";
 import { EmployeeProvider } from "./employee/EmployeeProvider";
 import { EmployeeList } from "./employee/EmployeeList";
+import { CustomerProvider } from "./customer/CustomerProvider";
+import { CustomerList } from "./customer/CustomerList";
 import "./Skateshop.css";
 
 export const Skateshop = () => (
@@ -26,5 +28,10 @@ export const Skateshop = () => (
         <EmployeeProvider>
             <EmployeeList />
         </EmployeeProvider>
+
+        <h2>Customers</h2>
+        <CustomerProvider>
+            <CustomerList />
+        </CustomerProvider>
     </>
 )
