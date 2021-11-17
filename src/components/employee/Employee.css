@@ -1,0 +1,14 @@
+.employees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+.employee {
+    flex-basis: 28%;
+    margin: 2em;
+    padding: 1em;
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+}
+  
