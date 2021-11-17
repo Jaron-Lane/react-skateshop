@@ -3,6 +3,8 @@ import { LocationProvider } from "./location/LocationProvider";
 import { LocationList } from "./location/LocationList";
 import { SkateboardProvider } from "./skateboard/SkateboardProvider";
 import { SkateboardList } from "./skateboard/SkateboardList";
+import { EmployeeProvider } from "./employee/EmployeeProvider";
+import { EmployeeList } from "./employee/EmployeeList";
 import "./Skateshop.css";
 
 export const Skateshop = () => (
@@ -19,5 +21,10 @@ export const Skateshop = () => (
         <SkateboardProvider>
             <SkateboardList />
         </SkateboardProvider>
+
+        <h2>Employees</h2>
+        <EmployeeProvider>
+            <EmployeeList />
+        </EmployeeProvider>
     </>
 )
