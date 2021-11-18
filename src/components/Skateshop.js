@@ -1,37 +1,12 @@
 import React from "react";
-import { LocationProvider } from "./location/LocationProvider";
-import { LocationList } from "./location/LocationList";
-import { SkateboardProvider } from "./skateboard/SkateboardProvider";
-import { SkateboardList } from "./skateboard/SkateboardList";
-import { EmployeeProvider } from "./employee/EmployeeProvider";
-import { EmployeeList } from "./employee/EmployeeList";
-import { CustomerProvider } from "./customer/CustomerProvider";
-import { CustomerList } from "./customer/CustomerList";
+// import { Routes } from "react-router-dom";
+import { NavBar } from "./nav/NavBar";
+import { ApplicationViews } from "./ApplicationViews";
 import "./Skateshop.css";
 
 export const Skateshop = () => (
     <>
-        <h2>Nashville Skateshop</h2>
-        <small>Tricks N Stuff.</small>
-
-        <h2>Locations</h2>
-        <LocationProvider>
-            <LocationList />
-        </LocationProvider>
-
-        <h2>Skateboards</h2>
-        <SkateboardProvider>
-            <SkateboardList />
-        </SkateboardProvider>
-
-        <h2>Employees</h2>
-        <EmployeeProvider>
-            <EmployeeList />
-        </EmployeeProvider>
-
-        <h2>Customers</h2>
-        <CustomerProvider>
-            <CustomerList />
-        </CustomerProvider>
+        <NavBar />
+        <ApplicationViews />
     </>
 )
